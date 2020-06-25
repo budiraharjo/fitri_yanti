@@ -88,6 +88,10 @@ switch($page){
   include "include/sejarah.php"; 
   break;
   
+  case 'poling': 
+  include "include/poling.php"; 
+  break;
+  
   
   default: 
   include "include/home.php";

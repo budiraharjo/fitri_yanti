@@ -82,7 +82,7 @@
         <div class="col-lg-6">
             <div class="form-group">
                 <label>Username (*masukkan NIP)</label>
-                <input class="form-control" id="result" name="username" placeholder="Username"  readonly="readonly" required>
+                <input class="form-control" name="username" placeholder="Username"  required>
             </div>
             <div class="form-group">
                 <label>Password</label>

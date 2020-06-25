@@ -56,25 +56,27 @@
   <div class="page-title2">PENGUMUMAN</div>
   
   <ul>
-  
-  <li>
-  <a href='pengumuman/2014/08/19/2/jadwal-pelaksanaan-tes-peserta-didik-baru'>
-  <img alt='Jadwal Pelaksanaan Tes Peserta Didik Baru' src='img_anekaweb/pengumuman/small_278167buku.jpg'></a>
-  <h3><a href='pengumuman/2014/08/19/2/jadwal-pelaksanaan-tes-peserta-didik-baru'><b>Jadwal Pelaksanaan Tes Peserta Didik Baru</b></a></h3>
-  <div class='post-meta'>
-	<div class='date'>19 Agustus 2014 | dibaca 317 pembaca
-	</div>
+	
+	 <li>
+  <a href="#">
+  <img src="img_anekaweb/berita/small_278167buku.jpg"></a>
+  <h3><a href=""><b>Jadwal Pelaksanaan Tes Peserta Didik Baru</b></a></h3>
+  <div class="post-meta">
+	<div class="date">2020-06-25 : 09:00	</div>
 </div>
   </li> 
-  <li>
-  <a href='pengumuman/2014/08/24/1/kalender-pendidikan-2015'>
-  <img alt='Kalender Pendidikan 2015' src='img_anekaweb/pengumuman/small_989440kaee.jpg'></a>
-  <h3><a href='pengumuman/2014/08/24/1/kalender-pendidikan-2015'><b>Kalender Pendidikan 2015</b></a></h3>
-  <div class='post-meta'>
-	<div class='date'>24 Agustus 2014 | dibaca 198 pembaca
-	</div>
+	
+						
+	 <li>
+  <a href="#">
+  <img src="img_anekaweb/berita/small_989440kaee.jpg"></a>
+  <h3><a href=""><b>Kalender Pendidikan 2015</b></a></h3>
+  <div class="post-meta">
+	<div class="date">2020-06-25 : 09:00	</div>
 </div>
-  </li>   </ul>
+  </li> 
+
+  </ul>
   
   </div>
 
@@ -94,22 +96,20 @@ Ketua kelompok tani </p>
   <div class="page-title2">KATEGORI BERITA</div>
   <ul>
   
+   
    <li>
-   <a href='kategoriberita/dinamika-sekolah'>Dinamika Sekolah 
-   <span class='jumblog'>(2)</span></a>
+   <a href=''>Berita
+   <span class='jumblog'>
+   (7)   </span></a>
    </li>
    <li>
-   <a href='kategoriberita/dunia-siswa'>Dunia Siswa 
-   <span class='jumblog'>(3)</span></a>
+   <a href=''>Pengumuman 
+   <span class='jumblog'>
+   (2)   </span></a>
    </li>
-   <li>
-   <a href='kategoriberita/ragam-edukasi'>Ragam Edukasi 
-   <span class='jumblog'>(1)</span></a>
-   </li>
-   <li>
-   <a href='kategoriberita/serba-serbi'>Serba Serbi 
-   <span class='jumblog'>(2)</span></a>
-   </li>   </ul>
+   
+      
+   </ul>
    </li>
    
    
@@ -145,70 +145,120 @@ Ketua kelompok tani </p>
   
   <li class="widget widget_social_media">
   <div class="page-title2">POLLING</div>
-  <div class='poling'><class style="color:#333;font-size:12px;font-weight:400"><b>Bagaimana tampilan website MyShool?</b></div><form method=POST action='hasil-poling.html'><br/>
+  <div class='poling'><class style="color:#333;font-size:12px;font-weight:400"><b>Bagaimana tampilan website MyShool?</b></div>
+  
+  <form method="POST"><br/>
 		<div class='marginpoling'>
-			<input type=checkbox name=pilihan value='2'/>
+			<input type="radio" name="pilihan" value="Bagus"/>
 			<class style="color:#333;font-size:12px;font-weight:400"> &nbsp;<b>Bagus</b>
 		</div>
 		<br/>
 		<div class='marginpoling'>
-			<input type=checkbox name=pilihan value='3'/>
+			<input type="radio" name="pilihan" value="Biasa Saja"/>
 			<class style="color:#333;font-size:12px;font-weight:400"> &nbsp;<b>Biasa Saja</b>
 		</div>
 		<br/>
 		<div class='marginpoling'>
-			<input type=checkbox name=pilihan value='4'/>
+			<input type="radio" name="pilihan" value="Tidak Bagus"/>
 			<class style="color:#333;font-size:12px;font-weight:400"> &nbsp;<b>Tidak Bagus</b>
 		</div>
 		<br/>
 		<div>
-			<input type=submit value='PILIH' class='button-blue'/>
+			<input type="submit" name="input" value="PILIH" class="button-blue"/>
 		</form>
-		<a href=lihat-poling.html><input type=button value='LIHAT HASIL' class='button-gray'></a>
+		<a href="?page=poling"><input type="button" value="LIHAT HASIL" class="button-gray"></a>
 	</div>
 	  </li>
   
-  
-  <li class="widget widget_video">
+  <?php 
+    if(@$_POST['input']){
+        
+        $pilihan=$_POST['pilihan'];
+		
+		if($pilihan == 'Bagus'){
+		$data = mysqli_query($koneksi,"select * from tb_poling where pilihan='Bagus'");
+		while($d = mysqli_fetch_array($data)){
+		$tambah = $d['nilai']  + 1;
+		$query=mysqli_query($koneksi,"update tb_poling set nilai='$tambah' where pilihan='Bagus'");
+        }
+		}
+		
+		if($pilihan == 'Biasa Saja'){
+		$data = mysqli_query($koneksi,"select * from tb_poling where pilihan='Biasa Saja'");
+		while($d = mysqli_fetch_array($data)){
+		$tambah = $d['nilai']  + 1;
+		$query=mysqli_query($koneksi,"update tb_poling set nilai='$tambah' where pilihan='Biasa Saja'");
+        }
+		}
+		
+		if($pilihan == 'Tidak Bagus'){
+		$data = mysqli_query($koneksi,"select * from tb_poling where pilihan='Tidak Bagus'");
+		while($d = mysqli_fetch_array($data)){
+		$tambah = $d['nilai']  + 1;
+		$query=mysqli_query($koneksi,"update tb_poling set nilai='$tambah' where pilihan='Tidak Bagus'");
+        }
+		}
+		
+		
+        if($query){
+        ?>
+            <script type="text/javascript">
+            alert("Input Data Sukses !")
+            window.location="?page=home";
+            </script>
+        <?php
+        }else{
+        ?>
+            <script type="text/javascript">
+            alert("Input Data Gagal !")
+            window.location="?page=home";
+            </script>
+        <?php
+        } 
+        
+    }
+    ?>
+	
+ <li class="widget widget_video">
   <div class="page-title2">STATISTIK PENGUNJUNG</div>
               
 		<table width="90%" height="151" border="0" cellpadding="0" cellspacing="0" style="font-size:12px; color: #a8a8a8; 
 
 	  margin-top:15px; margin-bottom:15px; margin-left:0px;">
 
+	
+	 
     <tr>
               <td width="20%"> Online </td>
-              <td>: <b>1</b> User </td>
+              <td>: <b>2</b> User </td>
           </tr>
             <tr>
               <td>Hari Ini  </td>
               <td>: 
-                3</td>
+                1</td>
           </tr>
             <tr>
-              <td>Kemarin</td>
+              <td>Total Pengnjung</td>
               <td>: 
-                3</td>
+                2</td>
           </tr>
             <tr>
-              <td>Bulan Ini</td>
+              <td>Hits hari Ini</td>
               <td> : 
-                89</td>
+               202</td>
           </tr>
             <tr>
-              <td> Tahun Ini </td>
+              <td> Total hits </td>
               <td>: 
-                880</td>
+                202</td>
           </tr>
             <tr>
               <td> Total</td>
               <td>: 
-                3700</td>
+                <img src="counter/0.png" alt="0"><img src="counter/0.png" alt="0"><img src="counter/0.png" alt="0"><img src="counter/0.png" alt="0"><img src="counter/0.png" alt="0"><img src="counter/2.png" alt="2"> </td>
           </tr>
           </table>					
   </li>
-  
-  
   
   <li class="widget widget_archive">
   <div class="page-title2">FACEBOOK</div>

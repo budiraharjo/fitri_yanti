@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Jun 2020 pada 03.43
+-- Waktu pembuatan: 26 Jun 2020 pada 01.12
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.2.27
 
@@ -204,35 +204,6 @@ INSERT INTO `tb_absensih` (`id_absensih`, `tanggal`, `nis`, `ket`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_berita`
---
-
-CREATE TABLE `tb_berita` (
-  `idb` int(5) NOT NULL,
-  `judulberita` varchar(255) NOT NULL,
-  `foto` varchar(150) NOT NULL,
-  `isiberita` text NOT NULL,
-  `tglpost` date NOT NULL,
-  `jampost` varchar(20) NOT NULL,
-  `penulis` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tb_berita`
---
-
-INSERT INTO `tb_berita` (`idb`, `judulberita`, `foto`, `isiberita`, `tglpost`, `jampost`, `penulis`) VALUES
-(7, 'Ujian Bahasa SMK Babunanajah Sukses', 'index.jpg', '<p>Kegiatan Uji Komptensi Bahasa Inggris di SMK  berjalan dengan sukses, kegaitan ini guna menguji kemampuan siswa dalam berbicara, mendengarkan percakapan Bahasa Inggirs, kegiatan ini didampingi oleh beberapa guru serta dukungan dari para orang tuapun berdatangan,</p>\r\n<p>Noviana megnatakan \"kegaitan ini menegangkan membuat jantung deg-degan, karena kali pertama saya melakukan ujian ini\" ujarnya pada sabtu 14 Oktober 2017.</p>', '2017-10-14', '03:29', 'Fitri Yanti'),
-(8, 'Kegiatan Penyuluhan Kenakalan Remaja dan Narkoba ', 'IMG_20161201_100858-e1485769902350.jpg', '<p>Penyuluhan dari kapolsek menes mengundang canda dan tawa, banyak ilmu yang bermanfaat disampaikan oleh kapolsek menes, tujuan diselenggarakannya kegiatan ini yaitu untuk menumbuh kembangkan kecintaan generasi penerus akan ilmu yang bermanfaat tidak disalah gunakan.</p>', '2017-10-14', '03:30', 'Fitri Yanti'),
-(9, 'Dicari... Pelajar Terbaik untuk Menerima Beasiswa \"Baccalaureate Diploma\"!', '442019265shutterstock-85395796780x390.jpg', 'JAKARTA, KOMPAS.com - Ada kesempatan menarik untuk pelajar SMA berbakat di Indonesia yang ingin mengenyam pendidikan di Australia. Tahun ini Australian Independent School menawarkan beasiswa kepada pelajar Sekolah Menengah Atas dan sederajat untuk menempuh studi \"International Baccalaureate Diploma\" atau IB. Skema beasiswa yang ditawarkan itu meliputi biaya sekolah, biaya ujian diploma IB, serta biaya pembangunan sekolah. Program beasiswa ini berlangsung selama tiga tahun dan akan dimulai pada April 2016 mendatang dan berakhir pada Desember 2018. \"Beasiswa ini hanya akan diberikan kepada...', '2020-06-25', '09:00', 'Fitri Yanti'),
-(10, '18 Staf Kemendag Raih Beasiswa StuNed ke Belanda', '8518-staf-kemendag-raih-beasiswa.jpg', 'JAKARTA, KOMPAS.com - Sebanyak 18 staf Kementerian Perdagangan (Kemendag) meraih beasiswa Studeren in Nederland (StuNed) untuk mengikuti tailor-made training tentang Review and Feasibility Studies for Free Trade Agreements (FTA) Engagement in Indonesia Trade Policy di Amsterdam, Belanda. Pelatihan tersebut berdurasi selama tiga minggu, terhitung sejak 25 Januari sampai 12 Februari 2016. Pendidikan singkat itu akan diselenggarakan di Vrije University. \"Dengan jaringan kerjanya yang luas, para peserta akan difasilitasi pihak Vrije untuk memperdalam teori yang diperoleh di kelas...', '2020-06-10', '09:00', 'Fitri Yanti'),
-(11, 'Pendaftaran \"Beasiswa Orange Tulip\" ke Belanda Sudah Dibuka!', '68pendaftaran-beasiswa.jpg', 'JAKARTA, KOMPAS.com - Pelajar pintar atau memiliki kualitas akademik tinggi, bahkan dinilai sangat tinggi, memang banyak. Tapi, berapa banyak di antara mereka yang punya kesempatan melanjutkan kuliah? Kesempatan itulah yang tengah ditawarkan oleh Nuffic Neso Indonesia bersama-sama lembaga pendidikan tinggi Belanda kepada para pelajar Indonesia. Dibuka pendaftaran untuk tahun depan, Nuffic Neso Indonesia menawarkan program Orange Tulip Scholarship atau Beasiswa Orange Tulip (OTS) 2016. Sebanyak 22 institusi pendidikan tinggi Belanda yang berbeda telah berkontribusi untuk menerima pelajar...', '2020-06-25', '09:00', 'Fitri Yanti'),
-(12, 'Sistem \"Online\", Revolusi Penghematan Uang dan Sayang Lingkungan', '57sistem-online.jpg', 'KOMPAS.com - Bayangkan, setiap tahun ada 7 juta siswa mengikuti ujian nasional (UN), yang masing-masing memakai minimal sepuluh lembar kertas. Jika satu pohon pinus menghasilkan 16 rim kertas, berarti ada sekitar 8.750 pohon pinus ditebang per tahun hanya untuk UN. Nah, kebutuhan kertas berbahan baku pohon sebanyak itu akan menyusut drastis, jika proses semacam UN beralih menjadi online. Penerapan sistem online juga otomatis mendukung gerakan ramah lingkungan atau go green. Bahan baku utama kertas berasal dari pohon atau kayu. Namun, pohon baru dapat diolah menjadi kertas setelah...', '2020-06-25', '09:00', 'Fitri Yanti'),
-(13, 'Mendikbud Sosialisasikan Peraturan tentang Penumbuhan Budi Pekerti', '12penumbuhan-budi-pekerti.jpg', 'Jakarta, Kemendikbud --- Disadari atau tidak, nilai-nilai dasar kemanusiaan yang berakar dari Pancasila masih sebatas pada pemahaman dalam tataran konseptual. Nilai-nilai dasar kemanusiaan ini belum sepenuhnya terwujud menjadi nilai aktual dengan cara yang menyenangkan di lingkungan sekolah, keluarga, masyarakat. Padahal nilai-nilai tersebut penting agar anak-anak Indonesia memiliki karakter positif. Menteri Pendidikan dan Kebudayaan (Mendikbud), Anies Baswedan mengatakan, kegiatan menumbuhkan karakter positif itu diterjemahkan dalam bentuk Peraturan Mendikbud Nomor 21 Tahun 2015...', '2020-06-25', '09:00', 'Fitri Yanti');
-
--- --------------------------------------------------------
-
---
 -- Struktur dari tabel `tb_guru`
 --
 
@@ -260,17 +231,17 @@ INSERT INTO `tb_guru` (`id_guru`, `nip`, `nama_guru`, `kode_guru`, `jenis_kelami
 (13, '16102005', 'SUSILAWATI, S.PD', 'E', 'PEREMPUAN', 'JAKARTA', '1976-12-12', 'TASIKMALAYA', 'ISLAM'),
 (14, '16102006', 'HANA KARINA, S.PD', 'F', 'PEREMPUAN', 'JAKARTA', '1990-11-02', 'TASIKMALAYA', 'ISLAM'),
 (15, '16102007', 'SUSI SUMARNI, S.PDI', 'G', 'PEREMPUAN', 'SEMARANG', '1988-01-20', 'TASIKMALAYA', 'ISLAM'),
-(17, '16102008', 'MARUF IRPAN HILMI', 'H', '', 'MAKASSAR', '1988-07-17', 'TASIKMALAYA', 'ISLAM'),
-(18, '16102009', 'OPIK TAUFIK R, S.PDI.', 'I', '', 'BOGOR', '1978-12-12', 'TASIKMALAYA', 'ISLAM'),
+(17, '16102008', 'MARUF IRPAN HILMI', 'H', 'LAKI-LAKI', 'MAKASSAR', '1988-07-17', 'TASIKMALAYA', 'ISLAM'),
+(18, '16102009', 'OPIK TAUFIK R, S.PDI.', 'I', 'LAKI-LAKI', 'BOGOR', '1978-12-12', 'TASIKMALAYA', 'ISLAM'),
 (19, '16102010', 'DRA. NENI YOFIANI', 'J', 'PEREMPUAN', 'TASIKMALAYA', '1975-10-10', 'TASIKMALAYA', 'ISLAM'),
-(20, '16102011', 'HJ. ETIN SUMIATIN, S.PD.', 'K', '', 'GARUT', '1985-04-22', 'TASIKMALAYA', 'ISLAM'),
+(20, '16102011', 'HJ. ETIN SUMIATIN, S.PD.', 'K', 'PEREMPUAN', 'GARUT', '1985-04-22', 'TASIKMALAYA', 'ISLAM'),
 (21, '16102012', 'ENCEP ERWIN DJEN SM, ST.', 'L', 'LAKI-LAKI', 'TASIKMALAYA', '1963-11-11', 'TASIKMALAYA', 'ISLAM'),
 (22, '16102013', 'TENI SETIANI, S.PD.', 'M', 'PEREMPUAN', 'CIBUBUR', '1988-12-20', 'TASIKMALAYA', 'ISLAM'),
 (23, '16102014', 'DRA. EEN NURSIAH', 'N', 'PEREMPUAN', 'BOGOR', '1969-07-18', 'TASIKMALAYA', 'ISLAM'),
 (24, '16102015', 'EGA YOGASWARA, S.PD.', 'O', 'LAKI-LAKI', 'JAKARTA', '1989-07-15', 'TASIKMALAYA', 'ISLAM'),
 (25, '16102016', 'GHEA NUR HIKMAH, S.PD.', 'P', 'PEREMPUAN', 'JAKARTA', '1990-12-11', 'TASIKMALAYA', 'ISLAM'),
 (26, '16102017', 'AAM AMALIA, S.AG.', 'Q', 'PEREMPUAN', 'TASIKMALAYA', '1990-05-06', 'TASIKMALAYA', 'ISLAM'),
-(27, '16102018', 'CEP GIAN RESNU', 'R', '', 'GARUT', '1986-08-13', 'TASIKMALAYA', 'ISLAM');
+(28, '16102019', 'JAJANG, M.PD', 'R', 'LAKI-LAKI', 'PANDEGLANG', '1990-05-06', 'CIMEDANG', 'ISLAM');
 
 -- --------------------------------------------------------
 
@@ -354,21 +325,14 @@ INSERT INTO `tb_jadwal` (`id_jadwal`, `id_mengajar`, `hari`, `jam_mulai`, `jam_b
 (69, 32, 'Jumat', '10:05', '11:20', 13),
 (70, 32, 'Jumat', '08:20', '09:45', 14),
 (71, 30, 'Jumat', '10:05', '11:20', 14),
-(73, 34, 'Sabtu', '08:20', '09:45', 12),
 (74, 27, 'Sabtu', '10:05', '11:20', 12),
 (75, 35, 'Sabtu', '11:20', '13:00', 12),
-(76, 37, 'Sabtu', '13:00', '13:40', 12),
-(77, 34, 'Sabtu', '07:00', '08:40', 13),
-(78, 34, 'Sabtu', '07:00', '08:20', 13),
 (79, 29, 'Sabtu', '08:20', '09:45', 13),
 (80, 35, 'Sabtu', '10:05', '11:20', 13),
 (81, 27, 'Sabtu', '11:20', '13:00', 13),
-(82, 37, 'Sabtu', '13:00', '13:40', 13),
 (83, 29, 'Sabtu', '07:00', '08:20', 14),
 (84, 35, 'Sabtu', '08:20', '09:45', 14),
-(85, 34, 'Sabtu', '10:05', '11:20', 14),
 (86, 36, 'Sabtu', '11:20', '13:00', 14),
-(87, 37, 'Sabtu', '13:00', '13:40', 14),
 (88, 36, 'Senin', '07:00', '08:00', 12);
 
 -- --------------------------------------------------------
@@ -467,10 +431,8 @@ INSERT INTO `tb_mengajar` (`id_mengajar`, `kode_guru`, `kode_mapel`) VALUES
 (31, 'I', '15'),
 (32, 'F', '05'),
 (33, 'L', '01'),
-(34, 'R', '18'),
 (35, 'O', '13'),
 (36, 'B', '15'),
-(37, 'R', '21'),
 (38, 'P', '19'),
 (39, 'C', '04');
 
@@ -511,7 +473,8 @@ INSERT INTO `tb_pengguna` (`id_pengguna`, `username`, `pass`, `status`) VALUES
 (20, '16102017', 'amel.guru', 'guru'),
 (21, '16102018', 'resnu.guru', 'guru'),
 (26, 'admin', 'admin', 'admin'),
-(27, 'tatausaha', 'tatausaha', 'tatausaha');
+(27, 'tatausaha', 'tatausaha', 'tatausaha'),
+(28, '16102019', '16102019', 'guru');
 
 -- --------------------------------------------------------
 
@@ -563,12 +526,6 @@ ALTER TABLE `tb_absensi`
 --
 ALTER TABLE `tb_absensih`
   ADD PRIMARY KEY (`id_absensih`);
-
---
--- Indeks untuk tabel `tb_berita`
---
-ALTER TABLE `tb_berita`
-  ADD PRIMARY KEY (`idb`);
 
 --
 -- Indeks untuk tabel `tb_guru`
@@ -647,16 +604,10 @@ ALTER TABLE `tb_absensih`
   MODIFY `id_absensih` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_berita`
---
-ALTER TABLE `tb_berita`
-  MODIFY `idb` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
 -- AUTO_INCREMENT untuk tabel `tb_guru`
 --
 ALTER TABLE `tb_guru`
-  MODIFY `id_guru` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_guru` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_jadwal`
@@ -686,13 +637,13 @@ ALTER TABLE `tb_mengajar`
 -- AUTO_INCREMENT untuk tabel `tb_pengguna`
 --
 ALTER TABLE `tb_pengguna`
-  MODIFY `id_pengguna` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_pengguna` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_siswa`
 --
 ALTER TABLE `tb_siswa`
-  MODIFY `id_siswa` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_siswa` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

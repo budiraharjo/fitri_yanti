@@ -12,12 +12,12 @@
 
 				<div class="row">
                     <div class="col-md-12">
-                        <form action="post">
+                        <form method="post">
                             <div class="card-box">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group row">
-                                            <label class="col-lg-3 col-form-label">Nim:</label>
+                                            <label class="col-lg-3 col-form-label">NIS:</label>
                                             <div class="col-lg-9">
                                                 <input type="text" name="nis" class="form-control">
                                             </div>
